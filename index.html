@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#c92825" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c92825'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='white'%3EC%3C/text%3E%3C/svg%3E" />
+  <title>Classicred — Play Together</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-page="home" aria-label="Classicred home"><span class="brand-mark">C</span><span class="brand-name">classic<span>red</span></span></button>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+      <nav class="top-links" aria-label="Main navigation">
+        <button class="nav-link active" data-page="home">Home</button>
+        <button class="nav-link" data-page="games">Games</button>
+        <button class="nav-link" data-page="avatar">Avatar</button>
+        <button class="nav-link" data-page="about">About</button>
+      </nav>
+      <div class="top-actions"><label class="search-box"><span>⌕</span><input id="searchInput" placeholder="Search games" aria-label="Search games" /></label><button class="avatar-pill" id="profileButton"><span class="mini-avatar">☺</span><span>Player</span><span class="chevron">⌄</span></button></div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="side-group"><p class="side-label">DISCOVER</p><button class="side-link selected" data-page="home"><span>⌂</span>Home</button><button class="side-link" data-page="games"><span>▦</span>Games</button><button class="side-link" data-page="avatar"><span>♙</span>Avatar</button></div>
+        <div class="side-group"><p class="side-label">YOUR STUFF</p><button class="side-link" data-page="favorites"><span>♡</span>Favorites <i class="tiny-count">3</i></button><button class="side-link" data-page="recent"><span>◷</span>Recently played</button><button class="side-link" data-page="about"><span>⚙</span>About Classicred</button></div>
+        <div class="sidebar-bottom"><div class="online-dot"></div><div><b>Classicred is online</b><small>Good to see you again!</small></div></div>
+      </aside>
+      <main id="mainContent" class="main-content"></main>
+    </div>
+  </div>
+  <div id="gameOverlay" class="game-overlay" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
